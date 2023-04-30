@@ -1,0 +1,14 @@
+avena~6000~Samuel~Berrio~sberrio~123
+
+<div>
+<%
+    Map<String,String> errores = (HashMap)request.getSession().getAttribute("errores");
+    if (errores != null && errores.size()>0){
+%>
+    <ul class="error-list">
+        <%for (String error:errores.values()){%>
+        <li><%=error%></li>
+        <%}%>
+    </ul>
+    <%}%>
+</div>
